@@ -4,563 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AREN | Afri Renewable Energy Company Limited</title>
-    <meta
-      name="description"
-      content="AREN delivers renewable energy, solar water pumping, borehole drilling, and solar irrigation solutions for communities, businesses, and farmers in Malawi."
-    />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        overscroll-behavior: none;
-      }
-      .section-shell {
-        background-image: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(242,248,255,0.95));
-      }
-      .glass {
-        backdrop-filter: blur(12px);
-      }
-    </style>
+    <meta name="description" content="AREN provides renewable energy, solar water pumping, borehole drilling, and solar irrigation solutions for communities, businesses, and farmers in Malawi." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'on-tertiary-fixed-variant': '#5b4300',
-              'surface-bright': '#f4faff',
-              'primary-fixed': '#acf4a4',
-              'secondary-container': '#62b4fe',
-              'surface-variant': '#d7e4ec',
-              'error-container': '#ffdad6',
-              'surface-container-highest': '#d7e4ec',
-              surface: '#f4faff',
-              'on-tertiary-fixed': '#261a00',
-              'surface-tint': '#2a6b2c',
-              'on-secondary-container': '#004470',
-              'on-primary-fixed-variant': '#0c5216',
-              'tertiary-fixed-dim': '#fabd00',
-              'on-primary-fixed': '#002203',
-              'on-tertiary': '#ffffff',
-              'on-secondary': '#ffffff',
-              'secondary-fixed': '#cfe5ff',
-              'inverse-primary': '#91d78a',
-              'on-secondary-fixed': '#001d34',
-              'on-tertiary-container': '#f8bb00',
-              'inverse-on-surface': '#e6f3fb',
-              outline: '#717a6d',
-              'surface-dim': '#cfdce4',
-              'on-background': '#111d23',
-              'primary-container': '#1b5e20',
-              'outline-variant': '#c0c9bb',
-              'tertiary-fixed': '#ffdf9e',
-              secondary: '#00629e',
-              'surface-container-low': '#e9f6fd',
-              'tertiary-container': '#694d00',
-              tertiary: '#4c3700',
-              'surface-container': '#e3f0f8',
-              'primary-fixed-dim': '#91d78a',
-              'on-surface': '#111d23',
-              'on-primary': '#ffffff',
-              'on-primary-container': '#90d689',
-              primary: '#00450d',
-              'surface-container-lowest': '#ffffff',
-              'on-error-container': '#93000a',
-              error: '#ba1a1a',
-              'on-error': '#ffffff',
-              'inverse-surface': '#263238',
-              'surface-container-high': '#ddeaf2',
-              'secondary-fixed-dim': '#99cbff',
-              background: '#f4faff',
-              'on-secondary-fixed-variant': '#004a78',
-              'on-surface-variant': '#41493e'
-            },
-            borderRadius: {
-              DEFAULT: '0.125rem',
-              lg: '0.25rem',
-              xl: '0.5rem',
-              full: '0.75rem'
-            },
-            spacing: {
-              'margin-desktop': '40px',
-              unit: '8px',
-              gutter: '24px',
-              'margin-mobile': '16px',
-              'container-max': '1280px'
-            },
-            fontFamily: {
-              'display-lg-mobile': ['Montserrat'],
-              'body-md': ['Inter'],
-              'headline-md': ['Montserrat'],
-              'label-md': ['Inter'],
-              'headline-sm': ['Montserrat'],
-              'body-lg': ['Inter'],
-              'display-lg': ['Montserrat']
-            },
-            fontSize: {
-              'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '700' }],
-              'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
-              'headline-md': ['32px', { lineHeight: '40px', fontWeight: '600' }],
-              'label-md': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '500' }],
-              'headline-sm': ['24px', { lineHeight: '32px', fontWeight: '600' }],
-              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
-              'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }]
-            }
-          }
-        }
-      };
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { color-scheme: light; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', sans-serif; }
+      h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+    </style>
   </head>
-  <body class="bg-background font-body-md text-on-surface">
-    <header class="fixed top-0 w-full z-50 bg-surface/90 glass shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-      <div class="h-20 max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between">
-        <a href="#home" class="flex items-center gap-4">
-          <img
-            alt="AREN Corporate Logo"
-            class="h-10 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYDYVc_2oKeoUyACFXeDqgPQCENrwSWNCWbBb3KLsWEko5DgO2fJOETgKrAQFYBAnu1jGMB2lb-Hfp7VnE8dEWn9z3mVc609rSPr3Lm846zlYtRUTm-pObJgA5N3x4C6hNQV6D4Pq5OCGxY4RlhAV7-WZslmtTMDxb908VhhMlrk8HsfgIwLjNZyLgzTcKL4hrIRwou4HYscDbwpD6--25ZiwX3iwcbEMweTXcsceW3KzPpmuCecHgw"
-          />
-          <span class="font-headline-sm text-headline-sm text-primary tracking-tight">AREN</span>
+  <body class="bg-slate-50 text-slate-800">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#home" class="flex items-center gap-3 text-lg font-semibold text-green-800">
+          <span class="rounded-full bg-green-100 px-3 py-1 text-sm font-bold uppercase tracking-[0.2em]">AREN</span>
+          <span class="hidden sm:inline">Afri Renewable Energy Company Limited</span>
         </a>
-        <nav class="hidden lg:flex items-center gap-8">
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#home">Home</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#eco-flow">Eco Flow</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
-          <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+        <nav class="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
+          <a class="hover:text-green-700" href="#about">About</a>
+          <a class="hover:text-green-700" href="#services">Services</a>
+          <a class="hover:text-green-700" href="projects.html">Projects</a>
+          <a class="hover:text-green-700" href="#contact">Contact</a>
         </nav>
-        <button id="menuToggle" class="lg:hidden text-on-surface" aria-label="Toggle menu">
-          <span class="material-symbols-outlined text-[28px]">menu</span>
-        </button>
-      </div>
-      <div id="mobileMenu" class="hidden lg:hidden border-t border-outline-variant/40 bg-surface px-margin-mobile py-4">
-        <div class="flex flex-col gap-3">
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#home">Home</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#about">About</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#services">Services</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="projects.html">Projects</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#eco-flow">Eco Flow</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#experience">Experience</a>
-          <a class="text-label-md font-label-md text-on-surface-variant" href="#contact">Contact</a>
-        </div>
       </div>
     </header>
 
-    <main id="home" class="pt-20">
-      <section class="relative overflow-hidden bg-surface-container-low py-20 lg:py-28">
-        <div class="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuANmHPC3BFf1jthi3OtH5u_J5A3wWYz_DPvLPWCojDHNltE7R3gglb5EKWeOB7UvPVO2zEbu_yqLE2tJ9QEApVKOKYddvV-MijtYTcEv3sBIpgqseRV5ETZBwa7s8rZ2mVCMeDYTw-1CcQzTrJUbQpW8G2u9Q6qWcoAvfh-i_g0sD7C26Sx5xWHaFzD1GTKkuM3oQsrRUXKRXrB6QksmPCXrKEhWTFlMukNmLHrq6I8DpME_VPx72DrPg')] bg-cover bg-center opacity-20"></div>
-        <div class="relative max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div class="lg:col-span-7">
-            <div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full shadow-sm mb-6">
-              <span class="material-symbols-outlined text-primary">eco</span>
-              <span class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Climate-Smart Solutions</span>
-            </div>
-            <h1 class="text-display-lg-mobile font-display-lg-mobile lg:text-display-lg lg:font-display-lg text-on-surface leading-tight">
-              Renewable Energy.<br />
-              <span class="text-secondary">Clean Water.</span><br />
-              <span class="text-primary">Sustainable Agriculture.</span>
-            </h1>
-            <p class="mt-6 max-w-2xl text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
-              Afri Renewable Energy Company Limited (AREN) provides reliable, affordable, and sustainable renewable energy and water solutions designed to improve lives, strengthen businesses, and support climate-smart development in Malawi and beyond.
+    <main id="home">
+      <section class="bg-gradient-to-br from-green-950 via-green-800 to-emerald-700 text-white">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
+          <div class="max-w-2xl">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-green-200">Climate-smart solutions</p>
+            <h1 class="text-4xl font-bold leading-tight sm:text-5xl">Renewable energy. Clean water. Sustainable agriculture.</h1>
+            <p class="mt-6 text-lg text-green-50/90">
+              AREN delivers reliable, affordable, and sustainable energy and water solutions for communities, institutions, and businesses across Malawi.
             </p>
-            <div class="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="#services" class="bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-lg shadow-md transition-colors flex items-center justify-center gap-2">
-                Explore Our Solutions
-                <span class="material-symbols-outlined">arrow_forward</span>
-              </a>
-              <a href="#contact" class="border border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-lg transition-colors flex items-center justify-center">
-                Request a Consultation
-              </a>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#services" class="rounded-lg bg-white px-6 py-3 text-center font-semibold text-green-800 transition hover:bg-green-50">Explore our solutions</a>
+              <a href="#contact" class="rounded-lg border border-white/40 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10">Request a consultation</a>
             </div>
           </div>
-          <div class="lg:col-span-5 mt-12 lg:mt-0">
-            <div class="rounded-2xl overflow-hidden shadow-xl border border-outline-variant/30">
-              <img
-                class="w-full h-[420px] object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQJqE3M1psiWrvqydPBy0G1uYyegBr58IZQrxivfv7CWrh6S6vVcfNfmW1m7AZJZwGlLt0A0KStynNGIiojMUlowt8Z-gJv3Kz3ip5D0gGvMHY1fzwY0y0XJXAb4ZX9E8f-8vve5MwBh77_uP7CqzuvA_CDpbL8Mbw4PlY9EuIwlSlVyL-nstbTUa_8Wk1S-cRgBhhVTY2HkSpW4n2KPi8A1icG9eoLGBTCXHUdY7OLAZsh9JGFXA4dg"
-                alt="Solar panels and water pumping infrastructure"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16 bg-surface-bright border-y border-outline-variant/20">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="bg-surface rounded-xl p-6 text-center shadow-sm">
-            <div class="text-display-lg-mobile font-display-lg-mobile text-primary">6+</div>
-            <p class="text-label-md font-label-md uppercase tracking-wider text-on-surface-variant">Years Experience</p>
-          </div>
-          <div class="bg-surface rounded-xl p-6 text-center shadow-sm">
-            <div class="text-display-lg-mobile font-display-lg-mobile text-secondary">130+</div>
-            <p class="text-label-md font-label-md uppercase tracking-wider text-on-surface-variant">Boreholes Drilled</p>
-          </div>
-          <div class="bg-surface rounded-xl p-6 text-center shadow-sm">
-            <div class="text-display-lg-mobile font-display-lg-mobile text-tertiary">100+</div>
-            <p class="text-label-md font-label-md uppercase tracking-wider text-on-surface-variant">Solar Systems Installed</p>
-          </div>
-          <div class="bg-surface rounded-xl p-6 text-center shadow-sm">
-            <div class="text-display-lg-mobile font-display-lg-mobile text-primary-container">20+</div>
-            <p class="text-label-md font-label-md uppercase tracking-wider text-on-surface-variant">Institutional Clients</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-20 bg-surface-container-lowest">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-          <div class="mb-10">
-            <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-3">From the Field</p>
-            <h2 class="text-headline-md font-headline-md text-on-surface">Real Projects, Real People, Real Impact</h2>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="rounded-2xl overflow-hidden shadow-sm">
-              <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="AREN technician installing solar equipment" />
-              <div class="bg-surface p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Solar Installation Teams</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Hands-on deployment of reliable power systems for homes, schools, and businesses.</p>
-              </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm">
-              <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Borehole drilling crew at work" />
-              <div class="bg-surface p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Borehole Drilling</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Professional drilling and rehabilitation work that secures water access for communities.</p>
-              </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-sm">
-              <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Farmer using irrigation technology" />
-              <div class="bg-surface p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Irrigation for Farmers</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Climate-smart irrigation solutions that improve yields and support food security.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="py-24 bg-surface-bright">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div class="lg:col-span-5">
-            <div class="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                class="w-full h-[520px] object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNHBWWtc-mgkPpOzJc8SGUCjlD3XW4F6RP1C40spW5OVup2MMarQlllrro1SevML3WQY8vJ0407E3XFNJXTxUvTk1V1WQpME_aWDWbW82KL65OyvhT3FyvOhWQyUK503U7kLpGh1a5oIDm0eSAESAf4fPo3LWSdL4yBcd2PagGdbTDCF-xcVskmOduiqOZ6QVnDgL_Pw9img3DboTHMg53bVTQ2ZoxPpuzts0FK0adKjk4jczan1-1A"
-                alt="AREN team and sustainable agriculture"
-              />
-            </div>
-          </div>
-          <div class="lg:col-span-7 mt-12 lg:mt-0">
-            <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Who We Are</p>
-            <h2 class="text-headline-md font-headline-md text-on-surface mb-6">Powering Sustainable Development Through Renewable Energy</h2>
-            <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Afri Renewable Energy Company Limited was established with a vision of making renewable technologies a reliable, affordable, and convenient source of power and clean water for both rural and urban communities.
-            </p>
-            <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-8">
-              AREN combines technical expertise, community engagement, and innovative technologies to address some of Malawi’s most important challenges, including energy poverty, unsafe water, climate impacts, agricultural vulnerability, and dependence on harmful energy sources.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="bg-surface p-6 rounded-xl shadow-sm">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Our Vision</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">To make solar energy the reliable, affordable, and convenient source of power for both rural and urban areas in Malawi.</p>
-              </div>
-              <div class="bg-surface p-6 rounded-xl shadow-sm">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Our Mission</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">To provide cost-effective renewable energy and clean water solutions for domestic and commercial use.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="py-24 bg-surface-container">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-          <div class="max-w-2xl mb-12">
-            <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Our Core Services</p>
-            <h2 class="text-headline-md font-headline-md text-on-surface">Engineering Sustainable Solutions</h2>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9er80qoCvVlXn3K1hPWYwediGkGgCct7jSK9v3dJJvi0hyJnfGnMhVgq5oUqajhZKqyD-0M1Ytz5xxvyCjZXI54s1mB4wiTVB9DIDcN8pzeteHV94SDX9CJB7iwiHcvC_5vU2XvM090PDZyVDXRywlzLMQKWyXcbdN0uuI9rP79xN3ne1KDa32qjyo4y7jLNoTw0gqqegx2sLY75M2u7CMKwtxP8BhlHt5V9oWwLMsGNTewIm9qYesw')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Solar Energy</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Backup systems, off-grid installations, and commercial solar infrastructure for homes, businesses, and institutions.</p>
-              </div>
-            </div>
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFeNUNqIWREmfOvgqbCAh_M2e9S9kgC0ZBgpZ8waLFEg9VkWIzrLbK7xs6gmIZuk-Y2gQU8IA002F3-LSzFaMYY7C3Zfo_WzCAgRHhuq0P20tIBlW9UGLrY0jCG-p8jGPQ8prbwhP-1Xn30_OJaVrY-sfbZXMObhC0PgX3OC-y47aZHE4an-sxZ2S5ZyiCM1xFhQBuIaglD-0IYsZhV5txdHtnzkTTIt9dPERrSPN-oJKpVbpBk1i7wA')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Water Pumping</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Solar-powered borehole and surface water pumping systems that secure reliable water access for communities and farms.</p>
-              </div>
-            </div>
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-OlVsbVImkPDFvAk3CSqdENw5DReaB72BrgcduxqM_RaQaRE240s-GPqKPAx717KvgxtfpchI5J6COOYMTAbanY9PEEth36E2BBFKJ6sB3hoPNLXsfsCdkam_h6DCoio8cOlFAtuZmlKvIj9Y8N-2sAiqftqGkgVLYOppLB2-bhkj03XPhiSvKKqEnSDEgd16V64dCyWe4KcLadIx7Bxl0YI9z0UoVRPHUVMKOtxsSO-4R70r61LmuA')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Borehole Engineering</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">New drilling, rehabilitation, pump installation, and maintenance services for sustainable groundwater access.</p>
-              </div>
-            </div>
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwdOhx6VYf-cA7AfGxM3fQILsuRn3fon2xRnIMKeAwGv5dmeD2R_shfYORdW5ZkrmRQgJce7eZfkiVhd7NhRZKh690bY5nA60evEMhhg1RRE8SbPs-Vdze3io8DZLo_G0cKMgL312d-BHGz74aZJd8iFhu9kZ2cPYjo5i7iVV8f7km0ceVQ_RDG5BdUx4IdiibkRPqcDDfRUx8xgMhBXszaJ76SO6ldvV7vlXKo-fxwQGq0RcDe4iYrA')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Solar Irrigation</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Climate-smart irrigation systems for smallholder, medium, and commercial agricultural operations.</p>
-              </div>
-            </div>
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJgZsLFuPbZr9Z6NlF5Zl4Hnt20LK0JSGvtPRkIGxlsmyBIybPe__sJoeJSGHIXGn7B3phsRClLXvqGoDqbQtG_5FuZba1UrOsWBOnow96GQWA5OzRobWFNPsao6k-c6B_DqqC000nTLlqhGhGFdJ1u0WrkI-4zFBUSP__uLKnSpl76RhIRSLizyPIK557BjCVCTIf6VOwiNTE83pLp_I47ueHtEDBstlt0_lzfPM3XRhnPoW0A6EXGQ')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Heating &amp; Cooling</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Efficient solar thermal and climate-control systems that lower energy costs and improve resilience.</p>
-              </div>
-            </div>
-            <div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 transition-transform">
-              <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXrD7xL7Kj9UPiY1HU5rsbJlVDJOYwgyuQ0o0b41_MNqoYfLlyPt8nwghya3-pLRdEStL9rd6ur6MflfP_o9kaX9cA1JLZOGBReKDcdJjIqBqtUcD1YjyCREoyOI5W2TNzQ0JQ6wREerDWoiImjzXdndgdvQY_9b48CGm-M1ZCv_YIqiGPuwVQ5bmp2d_EVzpNA49W5tCCMhjeqHlFa9XLsW-_KpeitiFiNyQG2U0SaZ0-Q1DYA2dapQ')"></div>
-              <div class="p-6">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Wind &amp; Hybrid Tech</h3>
-                <p class="text-body-md font-body-md text-on-surface-variant">Hybrid renewable systems and wind-mill solutions tailored to unique site requirements.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="eco-flow" class="py-24 bg-surface">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-          <div class="lg:col-span-6 order-2 lg:order-1">
-            <img
-              class="w-full rounded-2xl shadow-xl object-cover h-[480px]"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuALDUII_KL7qI7LWCIDSyoMn4Q9REYcI7iFZRkoYHpha_0NmPIrSzY459N2qEkhtBp_SHYGCZ0-IGj8n-OolbyBniCgmfPGdYiVTRrHFcpkyTtQXL1NoMYGWOR5DAnRUo3o11FREeSbjKTKiCmO_nfQJl7Iwd_Hq0fJFY02fgDLLLtfYq4h3fOV1XcsFutrfSWdO4MNfAE7FkGbqHuE_NYREzhoyMJYXbN3pvzd8URXuPf5SwNAoLJRFw"
-              alt="AREN Eco Flow Mobile Irrigator"
-            />
-          </div>
-          <div class="lg:col-span-6 order-1 lg:order-2">
-            <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Flagship Product</p>
-            <h2 class="text-headline-md font-headline-md text-on-surface mb-6">AREN Eco Flow Mobile Irrigator</h2>
-            <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-8">
-              The Eco Flow Mobile Irrigator is an innovative climate-smart irrigation solution designed to support farmers with affordable and sustainable irrigation technology.
-            </p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Extend farming seasons and reduce rainfall dependence</li>
-              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Increase production and improve household income</li>
-              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Adapt to climate change with portable, solar-powered irrigation</li>
+          <div class="rounded-3xl border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur">
+            <h2 class="text-2xl font-semibold">Why AREN</h2>
+            <ul class="mt-6 space-y-4 text-sm text-green-50/90">
+              <li>• Proven experience in solar, pumping, borehole, and irrigation projects</li>
+              <li>• Community-centered delivery with practical maintenance support</li>
+              <li>• Climate-smart technology designed for resilience and affordability</li>
             </ul>
-            <a href="#contact" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg hover:bg-primary-container transition-colors">
-              Discover Eco Flow
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="py-24 bg-surface-container-lowest">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            <div class="lg:col-span-5">
-              <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Experience &amp; Track Record</p>
-              <h2 class="text-headline-md font-headline-md text-on-surface mb-6">Over 6 Years of Renewable Energy and Water Solutions Experience</h2>
-              <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-8">
-                Since establishment, AREN has successfully implemented renewable energy and water projects across Malawi, supporting government institutions, NGOs, schools, healthcare facilities, farmers, and businesses.
-              </p>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="bg-surface p-6 rounded-xl shadow-sm">
-                  <div class="text-display-lg-mobile font-display-lg-mobile text-primary">100+</div>
-                  <p class="text-label-md font-label-md text-on-surface-variant uppercase">Solar backup systems</p>
-                </div>
-                <div class="bg-surface p-6 rounded-xl shadow-sm">
-                  <div class="text-display-lg-mobile font-display-lg-mobile text-secondary">130+</div>
-                  <p class="text-label-md font-label-md text-on-surface-variant uppercase">Boreholes drilled</p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:col-span-7 mt-12 lg:mt-0">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-surface p-8 rounded-xl shadow-sm">
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Community Engagement</h3>
-                  <p class="text-body-md font-body-md text-on-surface-variant">We involve communities from the beginning so projects remain sustainable, inclusive, and locally owned.</p>
-                </div>
-                <div class="bg-surface p-8 rounded-xl shadow-sm">
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Capacity Building</h3>
-                  <p class="text-body-md font-body-md text-on-surface-variant">We train water committees, farmer groups, and community members on maintenance, water management, and hygiene.</p>
-                </div>
-                <div class="bg-surface p-8 rounded-xl shadow-sm md:col-span-2">
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Quality Assurance</h3>
-                  <p class="text-body-md font-body-md text-on-surface-variant">Every installation is delivered with experienced technicians, quality equipment, and professional workmanship to ensure reliable performance in challenging environments.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-16">
-            <h3 class="font-label-md text-label-md uppercase tracking-widest text-outline mb-6">Trusted by leaders and partners</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div class="bg-surface-container rounded-xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center justify-center min-h-[120px]">
-                <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">account_balance</span>
-                </div>
-                <span class="text-headline-sm font-headline-sm text-on-surface text-center">Government</span>
-              </div>
-              <div class="bg-surface-container rounded-xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center justify-center min-h-[120px]">
-                <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">public</span>
-                </div>
-                <span class="text-headline-sm font-headline-sm text-on-surface text-center">JICA</span>
-              </div>
-              <div class="bg-surface-container rounded-xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center justify-center min-h-[120px]">
-                <div class="w-12 h-12 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">groups</span>
-                </div>
-                <span class="text-headline-sm font-headline-sm text-on-surface text-center">VSO</span>
-              </div>
-              <div class="bg-surface-container rounded-xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center justify-center min-h-[120px]">
-                <div class="w-12 h-12 rounded-full bg-primary-container/10 text-primary-container flex items-center justify-center mb-3">
-                  <span class="material-symbols-outlined">engineering</span>
-                </div>
-                <span class="text-headline-sm font-headline-sm text-on-surface text-center">NCIC</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="py-24 bg-surface-container">
-        <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-          <div class="lg:col-span-5">
-            <p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Contact Us</p>
-            <h2 class="text-headline-md font-headline-md text-on-surface mb-6">Partner with AREN for Sustainable Solutions</h2>
-            <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed mb-8">
-              We are ready to assist you with customized renewable energy and climate-smart agricultural solutions. Reach out for consultations, quotations, or general inquiries.
+      <section id="about" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-green-700">Who we are</p>
+            <h2 class="text-3xl font-bold text-slate-900">Powering sustainable development through renewable energy</h2>
+            <p class="mt-5 text-lg text-slate-600">
+              Afri Renewable Energy Company Limited was established to make renewable technologies a reliable, affordable, and convenient source of power and clean water for rural and urban communities in Malawi.
             </p>
-            <div class="space-y-6">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined">location_on</span>
-                </div>
-                <div>
-                  <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface mb-2">Head Office</h3>
-                  <p class="text-body-md font-body-md text-on-surface-variant">Kentam House, Upper Floor, Boardman Road, City Centre, Mzuzu, Malawi</p>
-                </div>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div>
+                <p class="text-4xl font-bold text-green-700">6+</p>
+                <p class="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Years experience</p>
               </div>
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined">call</span>
-                </div>
-                <div>
-                  <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface mb-2">Phone</h3>
-                  <p class="text-body-md font-body-md text-on-surface-variant">+265 (0) 991 443 026</p>
-                  <p class="text-body-md font-body-md text-on-surface-variant">+265 (0) 881 997 837</p>
-                </div>
+              <div>
+                <p class="text-4xl font-bold text-amber-600">130+</p>
+                <p class="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Boreholes drilled</p>
               </div>
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined">mail</span>
-                </div>
-                <div>
-                  <h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface mb-2">Email</h3>
-                  <a class="text-body-md font-body-md text-primary" href="mailto:info.afrirenewableenergy@gmail.com">info.afrirenewableenergy@gmail.com</a>
-                </div>
+              <div>
+                <p class="text-4xl font-bold text-sky-600">100+</p>
+                <p class="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Solar systems installed</p>
+              </div>
+              <div>
+                <p class="text-4xl font-bold text-emerald-600">20+</p>
+                <p class="mt-2 text-sm uppercase tracking-[0.25em] text-slate-500">Institutional clients</p>
               </div>
             </div>
           </div>
-          <div class="lg:col-span-7 mt-12 lg:mt-0">
-            <div class="bg-surface-lowest rounded-2xl shadow-xl p-8 lg:p-10 border border-outline-variant/20">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-6">Request a Quotation</h3>
-              <form class="space-y-6" method="post" action="contact-handler.php">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label class="block text-label-md font-label-md text-on-surface-variant mb-2" for="firstName">First Name</label>
-                    <input class="w-full border-b-2 border-outline-variant bg-surface-container-low px-4 py-3 rounded-t-md outline-none focus:border-primary" id="firstName" name="first_name" type="text" placeholder="John" required />
-                  </div>
-                  <div>
-                    <label class="block text-label-md font-label-md text-on-surface-variant mb-2" for="lastName">Last Name</label>
-                    <input class="w-full border-b-2 border-outline-variant bg-surface-container-low px-4 py-3 rounded-t-md outline-none focus:border-primary" id="lastName" name="last_name" type="text" placeholder="Doe" required />
-                  </div>
-                </div>
-                <div>
-                  <label class="block text-label-md font-label-md text-on-surface-variant mb-2" for="email">Email Address</label>
-                  <input class="w-full border-b-2 border-outline-variant bg-surface-container-low px-4 py-3 rounded-t-md outline-none focus:border-primary" id="email" name="email" type="email" placeholder="john.doe@example.com" required />
-                </div>
-                <div>
-                  <label class="block text-label-md font-label-md text-on-surface-variant mb-2" for="service">Service of Interest</label>
-                  <select class="w-full border-b-2 border-outline-variant bg-surface-container-low px-4 py-3 rounded-t-md outline-none focus:border-primary" id="service" name="service">
-                    <option value="">Select a service</option>
-                    <option value="solar">Solar Energy Systems</option>
-                    <option value="water">Water Pumping Solutions</option>
-                    <option value="agri">Eco Flow Irrigator</option>
-                    <option value="drilling">Borehole Services</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-label-md font-label-md text-on-surface-variant mb-2" for="message">Project Details</label>
-                  <textarea class="w-full border-b-2 border-outline-variant bg-surface-container-low px-4 py-3 rounded-t-md outline-none focus:border-primary resize-none" id="message" name="message" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
-                </div>
-                <button class="w-full bg-primary text-on-primary py-4 rounded-md hover:bg-primary-container transition-colors flex items-center justify-center gap-2" type="submit">
-                  Submit Request
-                  <span class="material-symbols-outlined">arrow_forward</span>
-                </button>
-              </form>
+        </div>
+      </section>
+
+      <section id="services" class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-green-700">Our core services</p>
+            <h2 class="text-3xl font-bold text-slate-900">Engineering sustainable solutions for energy and water</h2>
+          </div>
+          <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Solar energy systems</h3>
+              <p class="mt-3 text-slate-600">Backup systems, off-grid solutions, and commercial solar infrastructure.</p>
             </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Water pumping</h3>
+              <p class="mt-3 text-slate-600">Solar-powered borehole and surface water pumping designed for reliable access.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Borehole engineering</h3>
+              <p class="mt-3 text-slate-600">Drilling, rehabilitation, pump installation, and maintenance services.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Solar irrigation</h3>
+              <p class="mt-3 text-slate-600">Climate-smart irrigation systems for smallholder and commercial farming.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Heating &amp; cooling</h3>
+              <p class="mt-3 text-slate-600">Efficient solar thermal and climate-control systems that reduce costs.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 class="text-xl font-semibold text-slate-900">Wind &amp; hybrid tech</h3>
+              <p class="mt-3 text-slate-600">Hybrid renewable systems tailored to unique site conditions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-green-700">Contact us</p>
+            <h2 class="text-3xl font-bold text-slate-900">Partner with AREN for sustainable solutions</h2>
+            <p class="mt-5 text-lg text-slate-600">
+              Reach out for consultations, quotations, or general inquiries. We will respond with the right solution for your project.
+            </p>
+            <div class="mt-8 space-y-5 text-slate-600">
+              <p><strong>Head office:</strong> Kentam House, Upper Floor, Boardman Road, City Centre, Mzuzu, Malawi</p>
+              <p><strong>Phone:</strong> +265 (0) 991 443 026</p>
+              <p><strong>Email:</strong> info.afrirenewableenergy@gmail.com</p>
+            </div>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <h3 class="text-2xl font-semibold text-slate-900">Request a quotation</h3>
+            <form class="mt-6 space-y-5" action="contact-handler.php" method="post">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-slate-700" for="first_name">First name</label>
+                  <input class="w-full rounded-lg border border-slate-300 px-4 py-3" id="first_name" name="first_name" required />
+                </div>
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-slate-700" for="last_name">Last name</label>
+                  <input class="w-full rounded-lg border border-slate-300 px-4 py-3" id="last_name" name="last_name" required />
+                </div>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="email">Email address</label>
+                <input class="w-full rounded-lg border border-slate-300 px-4 py-3" id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="service">Service of interest</label>
+                <select class="w-full rounded-lg border border-slate-300 px-4 py-3" id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="solar">Solar energy systems</option>
+                  <option value="water">Water pumping</option>
+                  <option value="agri">Solar irrigation</option>
+                  <option value="drilling">Borehole services</option>
+                </select>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="message">Project details</label>
+                <textarea class="min-h-32 w-full rounded-lg border border-slate-300 px-4 py-3" id="message" name="message" required></textarea>
+              </div>
+              <button class="w-full rounded-lg bg-green-700 px-4 py-3 font-semibold text-white transition hover:bg-green-800" type="submit">Submit request</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-surface-container text-on-surface py-16 border-t border-outline-variant/30">
-      <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-          <div class="md:col-span-2">
-            <img alt="AREN logo" class="h-8 w-auto object-contain mb-6 grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYDYVc_2oKeoUyACFXeDqgPQCENrwSWNCWbBb3KLsWEko5DgO2fJOETgKrAQFYBAnu1jGMB2lb-Hfp7VnE8dEWn9z3mVc609rSPr3Lm846zlYtRUTm-pObJgA5N3x4C6hNQV6D4Pq5OCGxY4RlhAV7-WZslmtTMDxb908VhhMlrk8HsfgIwLjNZyLgzTcKL4hrIRwou4HYscDbwpD6--25ZiwX3iwcbEMweTXcsceW3KzPpmuCecHgw" />
-            <p class="text-body-md font-body-md text-on-surface-variant max-w-sm">Leading Africa’s transition to sustainable energy and climate-smart agricultural solutions for a resilient future.</p>
-          </div>
-          <div>
-            <h4 class="text-label-md font-label-md font-bold text-primary uppercase mb-6 tracking-widest">Office</h4>
-            <p class="text-body-md font-body-md text-on-surface-variant mb-2">Kentam House, City Centre</p>
-            <p class="text-body-md font-body-md text-on-surface-variant mb-2">Mzuzu, Malawi</p>
-            <p class="text-body-md font-body-md text-on-surface-variant">+265 (0) 991 443 026</p>
-          </div>
-          <div>
-            <h4 class="text-label-md font-label-md font-bold text-primary uppercase mb-6 tracking-widest">Connect</h4>
-            <div class="flex gap-4">
-              <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-all" href="mailto:info.afrirenewableenergy@gmail.com"><span class="material-symbols-outlined">mail</span></a>
-              <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-all" href="#contact"><span class="material-symbols-outlined">call</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-16 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-label-md font-label-md text-on-surface-variant">
-          <span>© <span id="year"></span> Afri Renewable Energy Company Limited. All rights reserved.</span>
-          <div class="flex gap-8">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-          </div>
-        </div>
+    <footer class="border-t border-slate-200 bg-slate-100 py-10">
+      <div class="mx-auto max-w-7xl px-6 text-sm text-slate-600 lg:px-8">
+        <p>© <span id="year"></span> Afri Renewable Energy Company Limited. All rights reserved.</p>
       </div>
     </footer>
 
     <script>
-      const menuToggle = document.getElementById('menuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      menuToggle?.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
-      });
     </script>
   </body>
 </html>
